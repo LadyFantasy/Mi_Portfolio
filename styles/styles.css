@@ -10,8 +10,14 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-/****************/
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+/****************/
 .container_background {
   display: flex;
   justify-content: center;
@@ -19,23 +25,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100vw;
 }
 
 .container_wraper {
   width: 80vw;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.762);
+  background-color: rgba(0, 0, 0, 0.808);
 }
-
 
 .navbar {
   position: fixed;
   width: 80vw;
   list-style-type: none;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   padding: 1.5rem 10rem;
   background-color: rgb(0, 0, 0);
+  z-index: 5;
 }
 
 .navbar .navbar_link {
@@ -47,15 +54,14 @@
   padding-right: 5rem;
 }
 
-
 /* HERO */
 .hero {
   margin-top: 2rem;
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  padding: 0 10rem;
+  justify-content: space-between; 
+  padding: 0 15rem;
 }
 
 .hero .hero_name {
@@ -63,45 +69,65 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 
-.hero .hero_name .arrows{
-  position: absolute; 
-  z-index: 1; 
-  opacity: 0.30; 
-  width: 100% ;
+.hero .hero_name .arrows {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.30;
+  width: 100%;
   height: auto;
- /
 }
-.hero div > h1 {
+
+.hero div>h1 {
   font-size: 7.5rem;
   font-weight: 300;
-  color: #ffd5f6;
+  color: #fde0f7;
   letter-spacing: 0.4rem;
   text-shadow: 5px 5px 9px rgba(255, 255, 255, 0.555);
-  position: relative; 
-  z-index: 2; 
+  position: relative;
+  z-index: 2;
 }
 
-.hero div > h2 {
+.hero div>h2 {
   font-size: 5rem;
   font-weight: 300;
-  /* font-stretch: expanded; */
-  color: #abd8fc; 
+  color: #c5e5ff;
   letter-spacing: 0.4rem;
   text-shadow: 5px 5px 9px rgba(255, 255, 255, 0.548);
-  position: relative; 
-  z-index: 2; 
+  position: relative;
+  z-index: 2;
 }
-
 
 .hero .hero_social {
   margin-top: 7rem;
 }
 
+.hero .hero_social a {
+  font-size: 1.6rem;
+  font-weight: 200;
+  padding: 2rem .5rem;
+}
+
+.hero .hero_social i {
+  font-size: 2rem;
+  padding: 0.5rem;
+  transition: transform 0.6s ease, text-shadow ease;
+}
+
+.hero .hero_social i:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+  text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.326);
+}
+
 .hero .hero_social .icons {
   margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.hero .hero_social .icons span{
+  font-size: 1.7rem;
 }
 
 .hero .hero_social .hero_photo {
@@ -120,30 +146,13 @@
     0 0 30px 18px rgba(0, 255, 255, 0.26);
 }
 
-.hero .hero_social a {
-  font-size: 1.6rem;
-  font-weight: 200;
-  padding: 2rem 1rem;
-}
 
-.hero .hero_social i {
-  font-size: 2rem;
-  padding: 0.7rem;
-  transition: transform 0.6s ease, text-shadow ease;
-}
-
-.hero .hero_social i:hover {
-  transform: scale(1.3);
-  cursor: pointer;
-  text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.326);
-}
 
 /* MAIN */
 .main_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
   margin: 0 1rem 2rem;
   padding: 3rem;
   background-color: rgba(0, 0, 0, 0.174);
@@ -152,32 +161,26 @@
 .main_container_presentation {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between; /* Cambia a espacio entre para que queden alineados */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
   gap: 2rem;
   border-radius: 20px;
   border: solid 3px rgba(255, 255, 255, 0.09);
   padding: 2rem;
-  
 }
 
-.main_container_presentation .arrows{
-  
-    position: absolute;
-    z-index: 1;
-   /*  opacity: 30%; */
-    width:70%;
-    height: auto;
-    
-    
-  
+.main_presentation {
+  padding: 2rem;
 }
-.main_presentation_title {
+
+.main .main_presentation .main_presentation_title {
   text-transform: uppercase;
   color: #b7dfff;
   font-size: 4rem;
   text-shadow: 5px 5px 9px rgba(255, 255, 255, 0.508);
   padding: 0 0 0 2.2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .main .main_presentation .main_presentation_text {
@@ -186,8 +189,11 @@
   padding: 1rem;
   font-weight: 300;
   line-height: 2.8rem;
+  position: relative;
+  z-index: 2;
 }
 
+/* Tabla */
 .main_table {
   display: flex;
   justify-content: center;
@@ -205,7 +211,6 @@
   border-radius: 20px;
   border: solid 3px rgba(255, 255, 255, 0.09);
   padding: 3rem;
-  
 }
 
 .table_head_cell_title {
@@ -226,7 +231,6 @@
 /* Filas impares */
 .table tbody tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.1);
-
 }
 
 .table_cell {
@@ -236,14 +240,11 @@
   font-size: 1.6rem;
   text-align: center;
   background-color: transparent;
-  
 }
-
-
 
 /* FORM */
 .form_container {
-  width: 40%;
+  width: 45%;
   margin: 3rem auto;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.174);
@@ -315,134 +316,180 @@
 }
 
 
-
-
 /* Tablet horizontal (max-width: 1080px) */
 @media (max-width: 1080px) {
-  .container {
-    width: 90vw;
+  .container_wraper {
+    width: 85vw;
   }
 
-  .hero_name_title {
-    font-size: 6rem;
+  .hero div>h1 {
+    font-size: 5rem;
   }
 
-  .hero_name_subtitle {
+  .hero div>h2
+   {
     font-size: 4rem;
   }
 
   .hero {
-    flex-direction: column;
-    /* Ajustamos los elementos en columna */
-    text-align: center;
+  padding: 0 3.5rem;
   }
 
-  .hero_photo {
-    margin-bottom: 2rem;
-  }
+  .hero .hero_social a {
+    font-size: 1.2rem;
+    padding: 0;
+}
 
   .navbar {
     padding: 1rem 5rem;
-    /* Reducimos el padding para adaptarlo a tablet */
   }
 }
 
 /* Tablet vertical (max-width: 768px) */
 @media (max-width: 768px) {
-  .container {
+  .container_wraper {
     width: 95vw;
   }
 
   .hero {
-    margin-top: 5rem
+    margin-top: 3rem;
+    padding: 0 2rem;
   }
 
-
-  .hero_name_title {
+  .hero div>h1 {
     font-size: 5rem;
   }
 
-  .hero_name_subtitle {
-    font-size: 3.5rem;
+  .hero div>h2 {
+    font-size: 3rem;
   }
+
+
+.hero .hero_social .icons a > *:not(i) {
+  display: none;
+}
+
+.hero .hero_social .hero_photo{
+  height: 17rem;
+  width: auto;
+}
 
   .main_container_presentation {
     flex-direction: column;
-    /* Hacemos que los elementos de la sección de presentación se apilen en columna */
     align-items: center;
     text-align: center;
   }
 
-  .main_photo {
-    width: 20rem;
-    height: 20rem;
-    margin-bottom: 2rem;
+  .table{
+    width: 100%;
+    border-spacing: 0;
+  }
+ 
+
+  .form_container{
+    width: 65%;
   }
 }
 
 /* Mobile 1 (max-width: 480px) */
 @media (max-width: 480px) {
-  .hero_name_title {
-    font-size: 4rem;
+
+  .hero {
+    margin-top: 1rem;
+    padding: 0 1rem;
   }
 
-  .hero_name_subtitle {
+  .hero div>h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero div>h2 {
     font-size: 2.5rem;
   }
 
-  .main_photo {
-    width: 15rem;
-    height: 15rem;
-  }
-
   .navbar {
-    padding: 1rem 2rem;
-    /* Reducimos más el padding para móviles */
+    padding: 1rem 0;
+    width: 100vw;
   }
 
+  .navbar .navbar_link{
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+
+
+  .hero .hero_social {
+    margin-top: 4rem;
+  }
+  .hero .hero_social .hero_photo{
+    height: 12rem;
+    width: auto;
+  }
+
+ 
+.main_presentation{
+  padding: 0;
+}
+
+.hero .hero_social .hero_photo{
+    height: 12rem;
+    width: auto;
+  }
+
+  .main .main_presentation .main_presentation_title{
+    font-size: 2.5rem;
+  }
+  .main .main_presentation .main_presentation_text{
+  font-size: 1.8rem;
+}
   .form_container {
     width: 80%;
-    /* Ajustamos el ancho del formulario en pantallas pequeñas */
   }
 
   .table {
-    width: 80%;
-    /* Reducimos el tamaño de la tabla en pantallas pequeñas */
+    width: 70%;
+    padding: 1rem;
   }
 }
 
-/* Mobile 2 (max-width: 375px) */
+
+/* Mobile 1 (max-width: 375px) */
 @media (max-width: 375px) {
-  .hero_name_title {
-    font-size: 3rem;
+  .container_background {
+    width: 100vw; 
+    margin: 0; 
+    padding: 0; 
   }
 
-  .hero_name_subtitle {
-    font-size: 2rem;
+  .container_wraper{
+  width: 100vw;
   }
 
-  .navbar {
-    flex-direction: column;
-    align-items: center;
+  .main_container_presentation{
+    padding: 1rem 0;
   }
 
-  .navbar .navbar_link {
-    padding: 0.5rem 0;
-    /* Espaciado más compacto en el menú de navegación */
+  .main .main_presentation .main_presentation_text{
+    font-size: 1.6rem;
   }
-
-  .main_photo {
-    width: 12rem;
-    height: 12rem;
-  }
-
   .form_container {
     width: 90%;
-    /* Mayor ajuste en pantallas pequeñas */
+  }
+.main_table{
+  width: 100vw;
+  margin: 0;
+}
+  .table {
+    padding: 1rem;
   }
 
-  .table {
-    width: 90%;
-    /* La tabla se ajusta aún más para móviles */
+
+  .table_head_cell_title{
+    font-size: 1.5rem;
+  }
+
+  .table_cell{
+    font-size: 1.4rem;
+    padding: 1.2rem;
   }
 }
