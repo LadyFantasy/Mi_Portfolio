@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Soledad Martínez</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container_background">
+      <!-- ********NAVBAR******** -->
+      <nav>
+        <ul class="navbar">
+          <li><a href="#presentation" class="navbar_link">Presentación</a></li>
+          <li><a href="#table" class="navbar_link">Conocimientos</a></li>
+          <li><a href="#contacto" class="navbar_link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- ***********MAIN CONTENT*********** -->
+      <div class="container_wraper">
+         <!-- ***********HERO*********** -->
+        <header class="hero">
+          <div class="hero_name">
+            <img src="assets/pngtree-neon-arrow-vector-illustration-png-image_6554949.png" alt="" class="arrows">
+            <h1 class="hero_name_title">Soledad Martínez</h1>
+            <h2 class="hero_name_subtitle">Desarrolladora de Software</h2>
+          </div>
+         
+          <div class="hero_social">
+            <img src="assets/foto.jpg" alt="Foto de perfil" class="hero_photo" />
+            <div class="icons">
+              <a href="https://linkedin.com/in/mariasoledadmartinez88" target="_blank">
+                <i class="fab fa-linkedin"></i>LinkedIn
+              </a>
+              <a href="https://github.com/LadyFantasy" target="_blank">
+                <i class="fab fa-github"></i>Github
+              </a>
+              <a href="mailto:msoledadm88@gmail.com"> <i class="fas fa-envelope"></i>Email </a>
+            </div>
+          </div>
+        </header>
+        <!-- ***********MAIN PRESENTACIÓN*********** -->
+        <main class="main" id="presentation">
+          <div class="main_container">
+            <div class="main_container_presentation">
+              
+              <section class="main_presentation">
+                <p class="main_presentation_title">Quién soy</p>
+                <p class="main_presentation_text">
+                  Tengo 10 años de experiencia como traductora audiovisual de inglés y francés al
+                  español. Traduje y corregí series, películas, programas para niños y documentales
+                  de todo tipo. Hace pocos años, comencé a estudiar desarrollo de software,
+                  formación que continuo con una Tecnicatura Superior en Desarrollo de Software. Me
+                  gustan los desafíos y me caracterizo por resolver problemas. Soy curiosa por
+                  naturaleza, detallista y amo aprender de todo, aptitudes que aplico todos los días
+                  como traductora y también como programadora.
+                </p>
+              </section>
+
+              <section class="main_presentation">
+                <p class="main_presentation_title">Qué hago</p>
+                <p class="main_presentation_text">
+                  Realicé varios cursos de Frontend y Backend en donde aprendí HTML, CSS, Bootstrap,
+                  Tailwind, Vanilla Javascript, React, Next, Node, Express, MongoDB y MySQL. También
+                  realicé algunos cursos y proyectos con Python, C# y Kotlin. Haber trabajado como
+                  freelance durante tantos años me dio las herramientas para poder desempeñarme de
+                  manera autodidacta y responsable. Aprendo rápido y me gusta resolver desafíos.
+                </p>
+              </section>
+            </div>
+
+            <!-- ***********TABLA CONOCIMIENTOS*********** -->
+            <section class="main_table" id="table">
+              <table class="table">
+                <thead class="table_head">
+                  <tr>
+                    <th class="table_head_cell table_head_cell_title">Lo que conozco</th>
+                    <th class="table_head_cell table_head_cell_title">Lo que estoy aprendiendo</th>
+                    <th class="table_head_cell table_head_cell_title">Lo que me gusta</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table_cell">Javascript</td>
+                    <td class="table_cell">Kotlin</td>
+                    <td class="table_cell">Psicología y neurociencia</td>
+                  </tr>
+                  <tr>
+                    <td class="table_cell">Node</td>
+                    <td class="table_cell">Cloud</td>
+                    <td class="table_cell">Viajar</td>
+                  </tr>
+                  <tr>
+                    <td class="table_cell">SQL</td>
+                    <td class="table_cell">Selenium</td>
+                    <td class="table_cell">Cine y series</td>
+                  </tr>
+                  <tr>
+                    <td class="table_cell">CSS</td>
+                    <td class="table_cell">Python</td>
+                    <td class="table_cell">Trekking</td>
+                  </tr>
+                  <tr>
+                    <td class="table_cell">React</td>
+                    <td class="table_cell">AWS</td>
+                    <td class="table_cell">Leer</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </main>
+
+        <!-- ***********FORMULARIO DE CONTACTO*********** -->
+        <section id="contacto" class="form_container">
+          <h2 class="form_title">Formulario de contacto</h2>
+          <form action="#" method="post" class="form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Homero" />
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required placeholder="Simpson" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="homero@simpson.com" />
+
+            <label for="telefono">Teléfono:</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              pattern="[0-9]+"
+              required
+              placeholder="+54 11..."
+            />
+
+            <input id="submit" type="submit" value="Enviar" />
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
